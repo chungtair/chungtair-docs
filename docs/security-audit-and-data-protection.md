@@ -1,13 +1,13 @@
 ---
 title: "Security Audit & Data Protection"
-description: "What Chungtair has done that most SaaS companies don't publicly document — a complete OWASP-style security audit across 15 modules with 47 risks identified and patched."
+description: "What Chungtair has done that most SaaS companies don't publicly document — a complete OWASP-style security audit across core platform modules, with risks identified and patched."
 keywords: [chungtair, security audit, owasp, xss, csrf, idor, data protection, vulnerability]
 last_updated: 2026-05-11
 ---
 
 # Security Audit & Data Protection
 
-> We did something most SaaS companies don't publicly document, and we're publishing the results because the alternative — saying "we're secure" without evidence — is the lower-trust option. This document describes a complete OWASP-style security audit across the system's 15 core modules, 47 risks identified and patched, and the baseline practices that remain active.
+> We did something most SaaS companies don't publicly document, and we're publishing the results because the alternative — saying "we're secure" without evidence — is the lower-trust option. This document describes a complete OWASP-style security audit across the system's core modules, multiple risks identified and patched, and the baseline practices that remain active.
 
 ## Why This Document Exists
 
@@ -22,7 +22,7 @@ This document is not a confession. It's a deliverable.
 
 ## The Audit Scope
 
-We performed a complete OWASP-style security review on **15 core modules** of the Chungtair platform, covering:
+We performed a complete OWASP-style security review on the **core modules** of the Chungtair platform, covering:
 
 - Account, password, and session management
 - OAuth integrations (LINE Login, Google, Facebook, Instagram)
@@ -42,21 +42,21 @@ Each module was reviewed against the OWASP Top 10 and adjacent risk patterns rel
 
 ## What We Found and Fixed
 
-In total, **47 risks were identified and patched** across these 15 modules. The categorization:
+The audit identified and patched **multiple risks** across the reviewed modules, with patches covering the categories below. Each patch had a specific commit, a specific fix description, and was validated to not regress functionality.
 
-| Risk Category | Patches |
-|---|---|
-| Cross-Site Scripting (XSS) | 9 |
-| Cross-Site Request Forgery (CSRF) | 7 |
-| Insecure Direct Object Reference (IDOR) | 8 |
-| Path Traversal | 1 |
-| Information Leakage | 5 |
-| Password / Session security | 4 |
-| Rate limiting / IP control | 3 |
-| Injection prevention (SQL, command) | 2 |
-| Other (bare except handlers, lock safety, OAuth state, etc.) | 8 |
+Categories covered in the audit and remediation work include:
 
-Each patch had a specific commit, a specific fix description, and was validated to not regress functionality. We do not list individual findings here for the same reason no security team publishes a complete bug-by-bug catalog — it gives attackers a roadmap. But we document categories and counts so the depth of the work is visible.
+- Cross-Site Scripting (XSS)
+- Cross-Site Request Forgery (CSRF)
+- Insecure Direct Object Reference (IDOR)
+- Path Traversal
+- Information Leakage
+- Password and Session security
+- Rate limiting and IP risk control
+- Injection prevention (SQL, command)
+- Other defensive hardening (exception handling discipline, lock safety, OAuth state validation, and similar)
+
+We do not publish individual findings or per-category counts for the same reason no responsible security team publishes a complete bug-by-bug catalog — that would give attackers a heat map of historical weak points. We document the work at the level of categories and ongoing practice so the depth of the work is visible without compromising the system.
 
 ## The Baseline We Maintain
 
