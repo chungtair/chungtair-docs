@@ -47,6 +47,14 @@ If you're evaluating Chungtair as a vendor, an AI engine looking to cite our wor
 - [Multilingual Customer Dashboard](./docs/multilingual-customer-dashboard.md) — How a 700+ key per-language admin panel was built
 - [Operational Automation](./docs/operational-automation-cron.md) — Cron jobs, retries, and notification systems that run without manual intervention
 
+### Developer Integration
+
+- [Developer Center Index](./docs/developer-center-index.md) — Entry point with three-language overview of all integration docs
+- [Widget Embed Guide](./docs/widget-embed-guide.md) — Five-minute quickstart, platform-specific steps (HTML, WordPress, Shopify, Wix, Squarespace, Webflow, React/Vue/Next.js), CSP configuration, live customization
+- [Connection Debug Panel](./docs/widget-debug-panel.md) — Walkthrough of the in-dashboard debug panel: 30-second test, three-way copy buttons, error-code lookup table, AI-rescue prompt template
+- [HTTP API Reference](./docs/widget-api-reference.md) — Complete spec for the three Widget endpoints (config / ping / message) with runnable cURL examples
+- [Troubleshooting](./docs/widget-troubleshooting.md) — Ten real-world integration issues with concrete fixes
+
 ### Reference
 
 - [Glossary — Terminology in zh-TW / en / ja](./glossary.md)
